@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Vertical Trello",
-  "description": "Allow Trello boards to be displayed vertically or horizontally.",
+  "description": "Allow Trello boards to be displayed vertically.",
   "version": "1.0",
   "author": "Natalie Perna",
   
