@@ -3,7 +3,7 @@
 
   "name": "Vertical Trello",
   "description": "Allow Trello boards to be displayed vertically.",
-  "version": "1.0",
+  "version": "1.1",
   "author": "Natalie Perna",
   
   "icons": {
@@ -11,10 +11,16 @@
     "128": "icon128.png"
   },
   
-  "content_scripts": [
-    {
-      "matches": ["*://trello.com/b/*"],
-      "js":["contentscript.js"]
-    }
+  "content_scripts": [{
+    "matches": ["*://trello.com/*"],
+    "js":["contentscript.js"]
+  }],
+  
+  "background": {
+    "scripts": ["background.js"]
+  },
+  
+  "permissions": [
+    "*://*/*", "tabs", "webNavigation"
   ]
 }

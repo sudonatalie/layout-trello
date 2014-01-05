@@ -1,14 +1,24 @@
-var cssFile = 'https://dl.dropboxusercontent.com/u/13818472/vertical.css';
+var cssFile = 'https://s3.amazonaws.com/vertical-trello/vertical.css';
 
-var header = document.getElementsByClassName('header-user')[0];
+function readyCheck() {
+    var header = document.getElementsByClassName('header-user')[0];
+    if (header && header.firstChild && header.firstChild.nextSibling)
+    {
+        insertButton();
+        clearInterval(timer);
+    }
+}
 
-var btnView = document.createElement('a');
-btnView.setAttribute('class', 'header-btn header-notifications js-toggle-view');
-btnView.setAttribute('title', 'Toggle Vertical View');
-btnView.setAttribute('href', '#');
-btnView.innerHTML = '<span class="header-btn-icon icon-lg icon-card light"></span><span class="header-btn-text">View</span>';
-btnView.onclick = toggleView;
-header.insertBefore(btnView, header.firstChild.nextSibling);
+function insertButton() {
+    var header = document.getElementsByClassName('header-user')[0];
+    var btnView = document.createElement('a');
+    btnView.setAttribute('class', 'header-btn header-notifications js-toggle-view');
+    btnView.setAttribute('title', 'Toggle Vertical View');
+    btnView.setAttribute('href', '#');
+    btnView.innerHTML = '<span class="header-btn-icon icon-lg icon-card light"></span><span class="header-btn-text">View</span>';
+    btnView.onclick = toggleView;
+    header.insertBefore(btnView, header.firstChild.nextSibling);
+}
 
 function toggleView() {
     var css = document.getElementById('verticalcss');
@@ -30,3 +40,8 @@ function applyVertical() {
 function removeElement(node) {
     node.parentNode.removeChild(node);
 }
+
+if (document.URL.indexOf("/b/") != -1)
+    var timer = setInterval(readyCheck,100);
+    // @todo Need better solution than interval checking after pushState,
+    //       but readyState always 'complete' after initial DOM load
