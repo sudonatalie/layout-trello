@@ -2,7 +2,8 @@ var cssFile = 'https://s3.amazonaws.com/vertical-trello/vertical.css';
 
 function readyCheck() {
     var header = document.getElementsByClassName('header-user')[0];
-    if (header && header.firstChild && header.firstChild.nextSibling)
+    var button = document.getElementById('vertical-button');
+    if (!button && header && header.firstChild && header.firstChild.nextSibling)
     {
         insertButton();
         clearInterval(timer);
@@ -12,6 +13,7 @@ function readyCheck() {
 function insertButton() {
     var header = document.getElementsByClassName('header-user')[0];
     var btnView = document.createElement('a');
+    btnView.id = 'vertical-button';
     btnView.setAttribute('class', 'header-btn header-notifications js-toggle-view');
     btnView.setAttribute('title', 'Toggle Vertical View');
     btnView.setAttribute('href', '#');
