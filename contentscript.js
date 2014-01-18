@@ -1,9 +1,9 @@
 var cssFile = 'https://s3.amazonaws.com/vertical-trello/vertical.css';
 
 function readyCheck() {
-    var header = document.getElementsByClassName('header-user')[0];
-    var button = document.getElementById('vertical-button');
-    if (!button && header && header.firstChild && header.firstChild.nextSibling)
+    var btnNotifications = document.getElementsByClassName('header-notifications')[0];
+    var btnView = document.getElementById('vertical-button');
+    if (!btnView && btnNotifications)
     {
         insertButton();
         clearInterval(timer);
@@ -11,15 +11,15 @@ function readyCheck() {
 }
 
 function insertButton() {
-    var header = document.getElementsByClassName('header-user')[0];
+    var btnNotifications = document.getElementsByClassName('header-notifications')[0];
     var btnView = document.createElement('a');
     btnView.id = 'vertical-button';
     btnView.setAttribute('class', 'header-btn header-notifications js-toggle-view');
     btnView.setAttribute('title', 'Toggle Vertical View');
     btnView.setAttribute('href', '#');
-    btnView.innerHTML = '<span class="header-btn-icon icon-lg icon-card light"></span><span class="header-btn-text">View</span>';
+    btnView.innerHTML = '<span class="header-btn-icon icon-lg icon-list light"></span>';
     btnView.onclick = toggleView;
-    header.insertBefore(btnView, header.firstChild.nextSibling);
+    insertAfter(btnView, btnNotifications);
 }
 
 function toggleView() {
@@ -41,6 +41,10 @@ function applyVertical() {
 
 function removeElement(node) {
     node.parentNode.removeChild(node);
+}
+
+function insertAfter(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
 
 if (document.URL.indexOf("/b/") != -1)
