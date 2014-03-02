@@ -1,5 +1,5 @@
-Vertical Trello
-===============
+Vertical Lists for Trello
+=========================
 
 Chrome extension that allows Trello lists to be displayed vertically.
 
@@ -8,4 +8,4 @@ The Vertical Trello extension adds a button to your Trello board pages allowing 
 Installation
 ------------
 
-Download and install the extension from here: [Chrome Web Store - Vertical Trello](https://chrome.google.com/webstore/detail/vertical-trello/aldklnbenbdgfgfbflalmlddkkndgnlc)
+Download and install the extension from here: [Chrome Web Store - Vertical Lists for Trello](https://chrome.google.com/webstore/detail/vertical-trello/aldklnbenbdgfgfbflalmlddkkndgnlc)

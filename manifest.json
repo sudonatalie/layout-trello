@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "Vertical Trello",
+  "name": "Vertical Lists for Trello",
   "description": "Allow Trello lists to be displayed vertically.",
-  "version": "1.5",
+  "version": "1.6",
   "author": "Natalie Perna",
   
   "icons": {
