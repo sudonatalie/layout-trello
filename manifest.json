@@ -3,7 +3,7 @@
 
   "name": "Vertical Lists for Trello",
   "description": "Allow Trello lists to be displayed vertically.",
-  "version": "1.6",
+  "version": "1.7",
   "author": "Natalie Perna",
   
   "icons": {
@@ -22,5 +22,9 @@
   
   "permissions": [
     "*://trello.com/*", "tabs", "webNavigation"
-  ]
+  ],
+	
+	"web_accessible_resources": [
+		"css/vertical.css"
+	]
 }

@@ -1,4 +1,4 @@
-var cssFile = 'https://s3.amazonaws.com/vertical-trello/vertical.css';
+var cssFile = chrome.extension.getURL("css/vertical.css");
 
 function readyCheck() {
     var btnNotifications = document.getElementsByClassName('header-notifications')[0];
