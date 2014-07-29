@@ -1,0 +1,18 @@
+.list {
+	float: none !important;
+	margin: 0 0 10px 10px !important;
+	width: 300px !important;
+}
+
+.list-area-wrapper {
+	overflow-y: auto !important;
+	margin-right: 10px !important;
+}
+
+.list-area {
+	width: inherit !important;
+}
+
+.fancy-scrollbar::-webkit-scrollbar-corner {
+	background-color: rgb(35, 113, 159) !important;
+}
