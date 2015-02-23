@@ -1,10 +1,13 @@
 
-#board.vertical-trello-vertical {
-    flex-direction: column;
+#board.vertical-trello-vertical,
+#board.vertical-trello-mixed {
     overflow-x: hidden;
     overflow-y: auto;
 }
 
+#board.vertical-trello-vertical {
+    flex-direction: column;
+}
 
 #board.vertical-trello-mixed {
     flex-direction: row;
