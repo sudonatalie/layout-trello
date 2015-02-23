@@ -4,6 +4,13 @@
     overflow-y: auto;
 }
 
+#board.mixed {
+    flex-direction: row;
+    overflow: auto;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
 .list {
     margin: 0 0 10px 10px;
     width: 260px;
