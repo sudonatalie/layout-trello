@@ -1,28 +1,10 @@
+#board {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 .list {
-	float: none !important;
-	margin: 0 0 10px 10px !important;
-	max-width: 300px !important;
-	flex-grow: 1;
-}
-
-.list-area-wrapper {
-	overflow-y: auto !important;
-	overflow-x: hidden;
-	margin-right: 10px !important;
-}
-
-.list-area {
-	width: inherit !important;
-	display: flex;
-	flex-wrap: wrap;
-	margin-right: 10px;
-	align-items: baseline;
-}
-
-.list-card {
-	max-width: 100% !important;
-}
-
-.fancy-scrollbar::-webkit-scrollbar-corner {
-	background-color: rgb(35, 113, 159) !important;
+    margin: 0 0 10px 10px;
+    width: 260px;
 }
