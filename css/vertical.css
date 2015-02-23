@@ -1,18 +1,24 @@
 
-#board {
+#board.vertical-trello-vertical {
     flex-direction: column;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-#board.mixed {
+
+#board.vertical-trello-mixed {
     flex-direction: row;
     overflow: auto;
     flex-wrap: wrap;
     align-content: flex-start;
 }
 
-.list {
+
+#board.vertical-trello-vertical .list,
+#board.vertical-trello-mixed .list {
     margin: 0 0 10px 10px;
-    width: 260px;
+}
+
+#board.vertical-trello-mixed .list {
+    max-height: 50%;
 }
