@@ -25,3 +25,15 @@
 #board.vertical-trello-mixed .list {
     max-height: 50%;
 }
+
+/*
+* Fixes for Trello update; They added a list-wrapper component that broke the extension.
+*/
+.list-wrapper {
+    overflow-x: hidden;
+	overflow-y: auto !important;
+    margin: 0 0 10px 10px;
+    width: 260px;
+    height:300px;
+    float:left;
+}
