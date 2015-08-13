@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "Vertical Lists for Trello",
-  "description": "Allow Trello lists to be displayed vertically.",
-  "version": "1.7",
+  "name": "List Layouts for Trello",
+  "description": "Allow Trello lists to be displayed vertically or in a grid.",
+  "version": "2.0",
   "author": "Natalie Perna",
   
   "icons": {
@@ -25,6 +25,6 @@
   ],
 	
 	"web_accessible_resources": [
-		"css/vertical.css"
+		"css/layout.css"
 	]
 }

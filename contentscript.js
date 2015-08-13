@@ -1,13 +1,13 @@
 
-var cssFile = chrome.extension.getURL('css/vertical.css'),
-    classVertical = 'vertical-trello-vertical',
-    classMixed = 'vertical-trello-mixed',
+var cssFile = chrome.extension.getURL('css/layout.css'),
+    classVertical = 'layout-trello-vertical',
+    classMixed = 'layout-trello-mixed',
     timer;
 
 function insertCss() {
-    if (document.getElementById('verticalcss') === null) {
+    if (document.getElementById('layoutcss') === null) {
         var css = document.createElement('link');
-        css.id = 'verticalcss';
+        css.id = 'layoutcss';
         css.type = 'text/css';
         css.rel = 'stylesheet';
         css.href = cssFile;
@@ -34,9 +34,9 @@ function insertButton() {
     var btnNotifications = document.getElementsByClassName('header-notifications')[0];
     var btnView = document.createElement('a');
 
-    btnView.id = 'vertical-button';
+    btnView.id = 'layout-button';
     btnView.setAttribute('class', 'header-btn header-notifications js-toggle-view');
-    btnView.setAttribute('title', 'Toggle Vertical View');
+    btnView.setAttribute('title', 'Toggle Layout');
     btnView.setAttribute('href', '#');
     btnView.innerHTML = '<span class="header-btn-icon icon-lg icon-list light"></span>';
     btnView.onclick = toggleView;
@@ -46,7 +46,7 @@ function insertButton() {
 
 function readyCheck() {
     var btnNotifications = document.getElementsByClassName('header-notifications')[0];
-    var btnView = document.getElementById('vertical-button');
+    var btnView = document.getElementById('layout-button');
 
     if (!btnView && btnNotifications) {
         insertButton();
