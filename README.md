@@ -8,4 +8,4 @@ The List Layouts for Trello extension adds a button to your Trello board pages a
 Installation
 ------------
 
-Download and install the extension from here: [Chrome Web Store - List Layouts for Trello](https://chrome.google.com/webstore/detail/vertical-trello/aldklnbenbdgfgfbflalmlddkkndgnlc)
+Download and install the extension from here: [Chrome Web Store - List Layouts for Trello](https://chrome.google.com/webstore/detail/list-layouts-for-trello/aldklnbenbdgfgfbflalmlddkkndgnlc)
