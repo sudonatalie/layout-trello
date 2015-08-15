@@ -22,5 +22,9 @@
 }
 
 #board.layout-trello-mixed .list-wrapper {
-    max-height: 45%;
+    height:	auto;
+}
+
+#board.layout-trello-mixed .js-list-content {
+    max-height: 42vh;
 }
