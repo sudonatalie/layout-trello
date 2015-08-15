@@ -51,6 +51,7 @@ function readyCheck() {
     if (!btnView && btnNotifications) {
         insertButton();
         insertCss();
+        board.classList.add(classMixed);
         clearInterval(timer);
     }
 }
