@@ -19,8 +19,9 @@
 #board.layout-trello-vertical .list-wrapper,
 #board.layout-trello-mixed .list-wrapper {
     margin: 0 0 10px 10px;
+    height: auto;
 }
 
-#board.layout-trello-mixed .list-wrapper {
-    max-height: 45%;
+#board.layout-trello-mixed .js-list-content {
+    max-height: 40vh;
 }
