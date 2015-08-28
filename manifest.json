@@ -3,7 +3,7 @@
 
   "name": "List Layouts for Trello",
   "description": "Allow Trello lists to be displayed vertically or in a grid.",
-  "version": "2.0",
+  "version": "2.1",
   "author": "Natalie Perna",
   
   "icons": {
