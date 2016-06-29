@@ -11,20 +11,19 @@
     "128": "icon128.png"
   },
   
-  "content_scripts": [{
-    "matches": ["*://trello.com/*"],
-    "js":["contentscript.js"]
-  }],
-  
   "background": {
     "scripts": ["background.js"]
   },
   
   "permissions": [
-    "*://trello.com/*", "tabs", "webNavigation", "storage"
+    "*://trello.com/b/*", "tabs", "storage"
   ],
 	
 	"web_accessible_resources": [
 		"css/layout.css"
-	]
+	],
+
+  "page_action": {
+    "default_title": "List Layouts for Trello"
+  }
 }
