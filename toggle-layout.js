@@ -1,7 +1,3 @@
-var board = document.getElementById('board'),
-    classVertical = 'layout-trello-vertical',
-    classMixed = 'layout-trello-mixed';
-
 if (board.classList.contains(classMixed)) {
   board.classList.remove(classMixed);
   board.classList.add(classVertical);
