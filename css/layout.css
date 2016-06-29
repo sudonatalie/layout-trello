@@ -15,7 +15,6 @@
     flex-wrap: wrap;
 }
 
-
 #board.layout-trello-vertical .list-wrapper,
 #board.layout-trello-mixed .list-wrapper {
     margin: 0 0 10px 10px;

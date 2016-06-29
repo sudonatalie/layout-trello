@@ -1,28 +1,26 @@
 {
   "manifest_version": 2,
-
   "name": "List Layouts for Trello",
   "description": "Allow Trello lists to be displayed vertically or in a grid.",
   "version": "2.1",
   "author": "Natalie Perna",
-  
   "icons": {
     "48": "icon48.png",
     "128": "icon128.png"
   },
-  
   "background": {
-    "scripts": ["background.js"]
+    "scripts": [
+      "background.js"
+    ]
   },
-  
   "permissions": [
-    "*://trello.com/b/*", "tabs", "storage"
+    "*://trello.com/b/*",
+    "tabs",
+    "storage"
   ],
-	
-	"web_accessible_resources": [
-		"css/layout.css"
-	],
-
+  "web_accessible_resources": [
+    "css/layout.css"
+  ],
   "page_action": {
     "default_title": "List Layouts for Trello"
   }
