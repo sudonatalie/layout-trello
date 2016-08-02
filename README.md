@@ -14,6 +14,7 @@ Pull requests welcome. Take a look at the [Issues](https://github.com/natalieper
 
 **Contributors**
 * Thank you [@monovertex](https://github.com/natalieperna/layout-trello/pull/7) for the (much appreciated) grid layout!
+* Thank you [@zaucy](https://github.com/natalieperna/layout-trello/pull/7) for local CSS!
 * Thank you [@ck0z](https://github.com/natalieperna/layout-trello/pull/8) for reporting breakage!
 * Thank you [@ehsankooheji](https://github.com/natalieperna/layout-trello/pull/11) for saved layout state!
 
