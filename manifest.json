@@ -23,5 +23,12 @@
   ],
   "page_action": {
     "default_title": "List Layouts for Trello"
+  },
+  "commands": {
+    "_execute_page_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L"
+      }
+    }
   }
 }
