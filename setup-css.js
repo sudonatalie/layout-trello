@@ -25,7 +25,7 @@ chrome.storage.sync.get('classList', function (result) {
 // Disable list scroll on keydown, enable on keyup
 var noScroll = function() {
   window.addEventListener("keydown", function(event) {
-    if (event.which === 17) {
+    if (event.which === 16) {
       var scrollingDivs = document.getElementsByClassName('list-cards');
       for(var i = 0; i < scrollingDivs.length; i++){
         scrollingDivs[i].classList.toggle("scrollOff");
@@ -34,7 +34,7 @@ var noScroll = function() {
   });
 
   window.addEventListener("keyup", function(event) {
-    if (event.which === 17) {
+    if (event.which === 16) {
       var scrollingDivs = document.getElementsByClassName('list-cards');
       for(var i = 0; i < scrollingDivs.length; i++){
         scrollingDivs[i].classList.toggle("scrollOff");
