@@ -24,7 +24,3 @@
 #board.layout-trello-mixed .js-list-content {
     max-height: 40vh;
 }
-
-.scrollOff {
-    overflow-y: hidden;
-}

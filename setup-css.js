@@ -21,24 +21,3 @@ chrome.storage.sync.get('classList', function (result) {
     board.classList.add(result.classList);
   }
 });
-
-// Disable list scroll on keydown, enable on keyup
-var noScroll = function() {
-  window.addEventListener("keydown", function(event) {
-    if (event.keyCode === 16) {
-      var scrollingDivs = document.getElementsByClassName('list-cards');
-      for(var i = 0; i < scrollingDivs.length; i++){
-        scrollingDivs[i].classList.toggle("scrollOff");
-      }
-    }
-  });
-
-  window.addEventListener("keyup", function(event) {
-    if (event.keyCode === 16) {
-      var scrollingDivs = document.getElementsByClassName('list-cards');
-      for(var i = 0; i < scrollingDivs.length; i++){
-        scrollingDivs[i].classList.toggle("scrollOff");
-      }
-    }
-  });
-}();
