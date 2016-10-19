@@ -28,3 +28,8 @@ Layouts
 
 **Horizontal**
 ![Horizontal Layout](https://raw.githubusercontent.com/natalieperna/layout-trello/master/screenshots/horizontal.png)
+
+Usage
+-----
+While visiting your Trello board you will have the ability to toggle your layouts by clicking on the extension icon.
+![Usage Gif](https://raw.githubusercontent.com/spellitwithaph/layout-trello/master/screenshots/list_layouts_for_trello.gif)
