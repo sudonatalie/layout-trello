@@ -32,4 +32,4 @@ Layouts
 Usage
 -----
 You can toggle your list layouts by clicking on the extension icon.
-![usage gif](https://raw.githubusercontent.com/spellitwithaph/layout-trello/master/screenshots/list_layouts_for_trello.gif)
+![usage gif](https://raw.githubusercontent.com/spellitwithaph/layout-trello/i26/screenshots/list_layouts_for_trello.gif)
