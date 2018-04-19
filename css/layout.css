@@ -16,8 +16,7 @@
 }
 
 #board.layout-trello-vertical .list-wrapper,
-#board.layout-trello-mixed .list-wrapper,
-#board.layout-trello-bmc .list-wrapper {
+#board.layout-trello-mixed .list-wrapper {
     margin: 0 0 10px 10px;
     height: auto;
 }
@@ -30,6 +29,10 @@
 
 #board.layout-trello-bmc {
 	margin-right: 10px;
+}
+
+#board.layout-trello-bmc .list-wrapper {
+    margin: 0 0 10px 10px;
 }
 
 #board.layout-trello-bmc .list-wrapper:nth-of-type(1) .js-list-content,
@@ -59,14 +62,14 @@
 #board.layout-trello-bmc .list-wrapper:nth-of-type(1),
 #board.layout-trello-bmc .list-wrapper:nth-of-type(4),
 #board.layout-trello-bmc .list-wrapper:nth-of-type(7) {
-    height: 66%;
+	height: calc((100% - 10px) * 0.66);
 }
 
 #board.layout-trello-bmc .list-wrapper:nth-of-type(2),
 #board.layout-trello-bmc .list-wrapper:nth-of-type(3),
 #board.layout-trello-bmc .list-wrapper:nth-of-type(5),
 #board.layout-trello-bmc .list-wrapper:nth-of-type(6) {
-    height: calc((66% - 10px)/2);
+    height: calc((((100% - 10px) * 0.66) - 10px) / 2);
 }
 
 #board.layout-trello-bmc .list-wrapper:nth-of-type(2),
@@ -76,7 +79,7 @@
 
 #board.layout-trello-bmc .list-wrapper:nth-of-type(3),
 #board.layout-trello-bmc .list-wrapper:nth-of-type(6) {
-	top: calc(((66% - 10px) / 2) + 10px);
+	top: calc(((((100% - 10px) * 0.66) - 10px) / 2) + 10px);
 }
 
 #board.layout-trello-bmc .list-wrapper:nth-of-type(5),
@@ -86,9 +89,9 @@
 
 #board.layout-trello-bmc .list-wrapper:nth-of-type(8),
 #board.layout-trello-bmc .list-wrapper:nth-of-type(9) {
-	height: calc(33% - 10px);
+	height: calc(((100% - 10px) * 0.34) - 10px);
 	width: 690px;
-	top: calc(66% + 10px);
+	top: calc(((100% - 10px) * 0.66) + 10px);
 }
 
 #board.layout-trello-bmc .list-wrapper:nth-of-type(4) {
