@@ -86,6 +86,19 @@
 	top: calc(((100% - 10px) * 0.66) + 10px);
 }
 
+#board.layout-trello-bmc .list-wrapper:nth-of-type(8) .list-card,
+#board.layout-trello-bmc .list-wrapper:nth-of-type(9) .list-card {
+	display: inline-block;
+	max-width: none;
+	width: calc(((100% - 8px) / 2) - 3px);
+	vertical-align: top;
+}
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(8) .list-card:nth-of-type(odd),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(9) .list-card:nth-of-type(odd) {
+	margin-right: 8px;
+}
+
 #board.layout-trello-bmc .list-wrapper:nth-of-type(4) {
 	left: 565px;
 }
