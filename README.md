@@ -24,6 +24,9 @@ Layouts
 **Horizontal**
 ![Horizontal Layout](https://raw.githubusercontent.com/natalieperna/layout-trello/master/screenshots/horizontal.png)
 
+**Business Model Canvas**
+![Business Model Canvas Layout](https://raw.githubusercontent.com/natalieperna/layout-trello/master/screenshots/business_model_canvas.png)
+
 
 Contribute
 ----------

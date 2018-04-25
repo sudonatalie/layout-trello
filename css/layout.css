@@ -24,3 +24,101 @@
 #board.layout-trello-mixed .js-list-content {
     max-height: 40vh;
 }
+
+/* Business Model Canvas styles */
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(1) .js-list-content,
+#board.layout-trello-bmc .list-wrapper:nth-of-type(2) .js-list-content,
+#board.layout-trello-bmc .list-wrapper:nth-of-type(3) .js-list-content,
+#board.layout-trello-bmc .list-wrapper:nth-of-type(4) .js-list-content,
+#board.layout-trello-bmc .list-wrapper:nth-of-type(5) .js-list-content,
+#board.layout-trello-bmc .list-wrapper:nth-of-type(6) .js-list-content,
+#board.layout-trello-bmc .list-wrapper:nth-of-type(7) .js-list-content,
+#board.layout-trello-bmc .list-wrapper:nth-of-type(8) .js-list-content,
+#board.layout-trello-bmc .list-wrapper:nth-of-type(9) .js-list-content {
+	height: 100%;
+}
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(1),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(2),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(3),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(4),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(5),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(6),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(7),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(8),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(9) {
+	position: absolute;
+}
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(1),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(4),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(7) {
+	height: calc((100% - 10px) * 0.66);
+}
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(2),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(3),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(5),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(6) {
+    height: calc((((100% - 10px) * 0.66) - 10px) / 2);
+}
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(2),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(3) {
+	left: 285px;
+}
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(3),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(6) {
+	top: calc(((((100% - 10px) * 0.66) - 10px) / 2) + 10px);
+}
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(5),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(6) {
+	left: 845px;
+}
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(8),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(9) {
+	height: calc(((100% - 10px) * 0.34) - 10px);
+	width: 690px;
+	top: calc(((100% - 10px) * 0.66) + 10px);
+}
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(8) .list-card,
+#board.layout-trello-bmc .list-wrapper:nth-of-type(9) .list-card {
+	display: inline-block;
+	max-width: none;
+	width: calc(((100% - 8px) / 2) - 3px);
+	vertical-align: top;
+}
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(8) .list-card:nth-of-type(odd),
+#board.layout-trello-bmc .list-wrapper:nth-of-type(9) .list-card:nth-of-type(odd) {
+	margin-right: 8px;
+}
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(4) {
+	left: 565px;
+}
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(7) {
+	left: 1125px;
+}
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(8) {
+	left: 5px;
+}
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(9) {
+	left: 705px;
+}
+
+#board.layout-trello-bmc .list-wrapper:nth-of-type(10) {
+	margin-left: 1410px;
+}
+
+#board.layout-trello-bmc .list-wrapper:last-child {
+	margin-right: 10px;
+}
