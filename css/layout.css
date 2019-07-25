@@ -1,26 +1,26 @@
 #board.layout-trello-vertical,
 #board.layout-trello-mixed {
-    overflow-x: hidden;
-    overflow-y: auto;
-    display: flex;
-    align-content: flex-start;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  align-content: flex-start;
 }
 
 #board.layout-trello-vertical {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 #board.layout-trello-mixed {
-    flex-direction: row;
-    flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 #board.layout-trello-vertical .list-wrapper,
 #board.layout-trello-mixed .list-wrapper {
-    margin: 0 0 10px 10px;
-    height: auto;
+  margin: 0 0 10px 10px;
+  height: auto;
 }
 
 #board.layout-trello-mixed .js-list-content {
-    max-height: 40vh;
+  max-height: 40vh;
 }
