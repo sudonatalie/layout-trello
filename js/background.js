@@ -5,7 +5,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 
   // Setup page for layout changes and show page action
   if (match) {
-    chrome.tabs.executeScript(null, {file: 'setup-css.js'});
+    chrome.tabs.executeScript(null, {file: 'js/setup-css.js'});
     chrome.pageAction.show(tabId);
   }
   else {
@@ -14,5 +14,5 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 });
 
 chrome.pageAction.onClicked.addListener(function (tab) {
-  chrome.tabs.executeScript(null, {file: 'toggle-layout.js'});
+  chrome.tabs.executeScript(null, {file: 'js/toggle-layout.js'});
 });
