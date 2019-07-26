@@ -7,14 +7,14 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
   // Setup page for layout changes and show page action
   if (match) {
     chrome.tabs.executeScript(null, {
-      file: 'js/setup-css.js'
+      file: 'js/init.js'
     });
   }
 });
 
 chrome.pageAction.onClicked.addListener(function(tab) {
   chrome.tabs.executeScript(null, {
-    file: 'js/toggle-layout.js'
+    code: 'toggleLayout()'
   });
 });
 
