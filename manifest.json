@@ -16,8 +16,8 @@
   "permissions": [
     "*://trello.com/b/*",
     "declarativeContent",
-    "tabs",
-    "storage"
+    "storage",
+    "webNavigation"
   ],
   "web_accessible_resources": [
     "css/layout.css"

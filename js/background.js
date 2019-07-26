@@ -1,8 +1,8 @@
 const boardUrl = 'trello.com/b/';
 
-chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
   // Match Trello board pages only
-  const match = tab.url.includes(boardUrl);
+  const match = details.url.includes(boardUrl);
 
   // Setup page for layout changes and show page action
   if (match) {
