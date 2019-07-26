@@ -16,7 +16,7 @@ function insertCss() {
 
 insertCss();
 
-chrome.storage.sync.get('classList', function (result) {
+chrome.storage.sync.get('classList', function(result) {
   if (result.classList) {
     board.classList.add(result.classList);
   }
