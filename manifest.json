@@ -15,6 +15,7 @@
   },
   "permissions": [
     "*://trello.com/b/*",
+    "declarativeContent",
     "tabs",
     "storage"
   ],
