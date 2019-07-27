@@ -18,12 +18,14 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
   }
 });
 
+// Set function to trigger on page action click
 chrome.pageAction.onClicked.addListener(function(tab) {
   chrome.tabs.executeScript(null, {
     code: 'toggleLayout()'
   });
 });
 
+// Enable page action trigger on Trello board pages only
 chrome.runtime.onInstalled.addListener(function(details) {
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     chrome.declarativeContent.onPageChanged.addRules([{
