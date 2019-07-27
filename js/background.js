@@ -1,5 +1,8 @@
 const boardUrl = 'trello.com/b/';
 
+// Declarative content script injection doesn't work on push state (i.e. when
+// navigating from trello.com/username/boards to a specific board page), so we
+// re-inject content scripts programmatically onHistoryStateUpdated.
 chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
   // Match Trello board pages only
   const match = details.url.includes(boardUrl);

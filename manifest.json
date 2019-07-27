@@ -13,6 +13,11 @@
       "js/background.js"
     ]
   },
+  "content_scripts": [{
+    "matches": ["*://trello.com/b/*"],
+    "css": ["css/layout.css"],
+    "js": ["js/init.js"]
+  }],
   "permissions": [
     "*://trello.com/b/*",
     "declarativeContent",
