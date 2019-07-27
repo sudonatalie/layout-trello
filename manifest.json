@@ -19,9 +19,6 @@
     "storage",
     "webNavigation"
   ],
-  "web_accessible_resources": [
-    "css/layout.css"
-  ],
   "page_action": {
     "default_title": "List Layouts for Trello"
   },

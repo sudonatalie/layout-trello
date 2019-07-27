@@ -1,17 +1,3 @@
-function insertCss() {
-  const cssFile = chrome.extension.getURL('css/layout.css');
-  const cssId = 'layoutcss';
-
-  if (document.getElementById(cssId) === null) {
-    let css = document.createElement('link');
-    css.id = cssId;
-    css.type = 'text/css';
-    css.rel = 'stylesheet';
-    css.href = cssFile;
-    document.getElementsByTagName('head')[0].appendChild(css);
-  }
-}
-
 function syncState() {
   chrome.storage.sync.get('classList', function(result) {
     let board = document.getElementById('board');
@@ -45,5 +31,4 @@ function toggleLayout() {
   }
 }
 
-insertCss();
 syncState();

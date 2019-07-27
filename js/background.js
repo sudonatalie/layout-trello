@@ -6,6 +6,9 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
 
   // Setup page for layout changes and show page action
   if (match) {
+    chrome.tabs.insertCSS(null, {
+      file: 'css/layout.css'
+    });
     chrome.tabs.executeScript(null, {
       file: 'js/init.js'
     });
