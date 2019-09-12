@@ -1,9 +1,12 @@
 function syncState() {
-  chrome.storage.sync.get('classList', function(result) {
+  let board_id = location.pathname.split('/')[2];
+  let storageKey = 'classList_' + board_id;
+
+  chrome.storage.sync.get(storageKey, function(result) {
     let board = document.getElementById('board');
 
-    if (result.classList) {
-      board.classList.add(result.classList);
+    if (result[storageKey]) {
+      board.classList.add(result[storageKey]);
     }
   });
 }
@@ -13,20 +16,22 @@ function toggleLayout() {
   const classMixed = 'layout-trello-mixed';
 
   let board = document.getElementById('board');
+  let board_id = location.pathname.split('/')[2];
+  let storageKey = 'classList_' + board_id;
 
   if (board.classList.contains(classMixed)) {
     board.classList.remove(classMixed);
     board.classList.add(classVertical);
     chrome.storage.sync.set({
-      'classList': classVertical
+      [storageKey]: classVertical
     });
   } else if (board.classList.contains(classVertical)) {
     board.classList.remove(classVertical);
-    chrome.storage.sync.remove('classList');
+    chrome.storage.sync.remove(storageKey);
   } else {
     board.classList.add(classMixed);
     chrome.storage.sync.set({
-      'classList': classMixed
+      [storageKey]: classMixed
     });
   }
 }
