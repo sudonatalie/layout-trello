@@ -1,6 +1,10 @@
-function syncState() {
+function constructStorageKey() {
   let boardId = location.pathname.split('/')[2];
-  let storageKey = 'classList_' + boardId;
+  return 'classList_' + boardId;
+}
+
+function syncState() {
+  let storageKey = constructStorageKey();
 
   chrome.storage.sync.get(storageKey, function(result) {
     let board = document.getElementById('board');
@@ -13,8 +17,7 @@ function syncState() {
 
 chrome.storage.onChanged.addListener(function (changes, namespace) {
   let board = document.getElementById('board');
-  let boardId = location.pathname.split('/')[2];
-  let storageKey = 'classList_' + boardId;
+  let storageKey = constructStorageKey();
 
   if (namespace == 'sync' && storageKey in changes) {
     board.classList.remove(changes[storageKey].oldValue);
@@ -27,8 +30,7 @@ function toggleLayout() {
   const classMixed = 'layout-trello-mixed';
 
   let board = document.getElementById('board');
-  let boardId = location.pathname.split('/')[2];
-  let storageKey = 'classList_' + boardId;
+  let storageKey = constructStorageKey();
 
   if (board.classList.contains(classMixed)) {
     board.classList.remove(classMixed);
