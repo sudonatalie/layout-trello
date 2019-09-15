@@ -1,32 +1,46 @@
+function constructStorageKey() {
+  let boardId = location.pathname.split('/')[2];
+  return 'classList_' + boardId;
+}
+
 function syncState() {
-  chrome.storage.sync.get('classList', function(result) {
+  let storageKey = constructStorageKey();
+
+  chrome.storage.sync.get(storageKey, function(result) {
     let board = document.getElementById('board');
 
-    if (result.classList) {
-      board.classList.add(result.classList);
+    if (result[storageKey]) {
+      board.classList.add(result[storageKey]);
     }
   });
 }
+
+chrome.storage.onChanged.addListener(function (changes, namespace) {
+  let board = document.getElementById('board');
+  let storageKey = constructStorageKey();
+
+  if (namespace == 'sync' && storageKey in changes) {
+    board.classList.remove(changes[storageKey].oldValue);
+    board.classList.add(changes[storageKey].newValue);
+  }
+});
 
 function toggleLayout() {
   const classVertical = 'layout-trello-vertical';
   const classMixed = 'layout-trello-mixed';
 
   let board = document.getElementById('board');
+  let storageKey = constructStorageKey();
 
   if (board.classList.contains(classMixed)) {
-    board.classList.remove(classMixed);
-    board.classList.add(classVertical);
     chrome.storage.sync.set({
-      'classList': classVertical
+      [storageKey]: classVertical
     });
   } else if (board.classList.contains(classVertical)) {
-    board.classList.remove(classVertical);
-    chrome.storage.sync.remove('classList');
+    chrome.storage.sync.remove(storageKey);
   } else {
-    board.classList.add(classMixed);
     chrome.storage.sync.set({
-      'classList': classMixed
+      [storageKey]: classMixed
     });
   }
 }
