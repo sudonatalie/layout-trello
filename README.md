@@ -1,3 +1,12 @@
+⚠️DEPRECATED⚠️
+============
+
+This Chrome extension is now deprecated. Please consider these alternatives:
+
+[Grid Layout for Trello](https://userstyles.org/styles/271254/grid-layout-for-trello)
+
+[Vertical Layout for Trello](https://userstyles.org/styles/271256/vertical-layout-for-trello)
+
 List Layouts for Trello
 =======================
 
