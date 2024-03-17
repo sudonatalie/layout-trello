@@ -6,8 +6,17 @@ function constructStorageKey() {
 function syncState() {
   let storageKey = constructStorageKey();
 
-  chrome.storage.sync.get(storageKey, function(result) {
+  chrome.storage.sync.get(storageKey, function onChromeStorageSyncResult(result) {
     let board = document.getElementById('board');
+
+    if (board === null) {
+      window.addEventListener(
+        'domcontentloaded',
+        onChromeStorageSyncResult.bind(this, result)
+      );
+
+      return;
+    }
 
     if (result[storageKey]) {
       board.classList.add(result[storageKey]);
